@@ -13,11 +13,17 @@ public class OpenBrowser {
     exec();
   }
   public static void exec() {
-    String cmd = "\"C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe\" --kiosk geneplus.cn";
+//    String cmd = "\"C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe\" --kiosk geneplus.cn";
 //    String cmd = "\"C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe\" --app=https://geneplus.cn --start-fullscreen";
 //    String cmd = "\"C:\\Program Files (x86)\\Microsoft\\Edge\\Application\\msedge.exe\" --app=https://geneplus.cn --start-fullscreen";
 //    String cmd = "\"C:\\Program Files (x86)\\Microsoft\\Edge\\Application\\msedge.exe\" --kiosk https://geneplus.cn --edge-kiosk-type=fullscreen";
 //    String cmd = "\"C:\\Program Files\\Mozilla Firefox\\firefox.exe\" --kiosk https://geneplus.cn";
+    String cmd = "cmd /c start C:\\Users\\admin\\Desktop\\BOX.bat";
+    /**
+     * BOX.bat内容：
+     * "C:\Program Files\Google\Chrome\Application\chrome.exe" --kiosk geneplus.cn
+     * exit
+     */
     try {
       Runtime.getRuntime().exec(cmd);
     } catch(Exception e) {
